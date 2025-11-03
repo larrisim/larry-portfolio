@@ -5,10 +5,12 @@ export default function Hero() {
     <section className="w-full flex flex-col items-center text-center">
       {/* Responsive full-width container with intrinsic height */}
       <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
-        <img
+        <Image
           src="/images/profile.png"
           alt="Larry Chang"
-          style={{ width: "100%", height: "auto", objectFit: "contain" }}
+          fill
+          style={{ objectFit: "contain", objectPosition: "center" }}
+          priority
         />
       </div>
       <br></br><br></br><br></br><br></br>
