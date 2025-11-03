@@ -70,7 +70,15 @@ export default function Header() {
         }}
       >
         <Link href="/">
-          <Image src="/images/logo_new.png" alt="Logo" width={260} height={140} />
+          <img
+            src="/images/logo_new.png"
+            alt="Logo"
+            style={{
+              width: "260px",    // same as original
+              height: "140px",
+              objectFit: "contain"
+            }}
+          />
         </Link>
       </div>
 
