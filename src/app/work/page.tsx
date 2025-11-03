@@ -43,7 +43,7 @@ export default function WorksPage() {
           title: "Journey Through the Camps", 
           role: "Composer & Sound Designer", 
           client: "Orta Interactive", 
-          img: "/images/Journey through the camps.png", 
+          img: "/images/Journey_through_the_camps.png", 
           link: "https://www.ortainteractive.com/work/journeywithhowardchandler-798y5" 
         },
 
@@ -59,7 +59,7 @@ export default function WorksPage() {
           title: "Sweet Sorrow", 
           role: "Audio Director, Composer & Sound Designer",
           client: "Orta Interactive",
-          img: "/images/Sweet Sorrow-Poster.png",
+          img: "/images/Sweet-Sorrow-Poster.png",
           link: "https://www.ortainteractive.com/work/shakespeare-vr"
         },
 
@@ -141,7 +141,7 @@ export default function WorksPage() {
           title: "Hedwig And the Angry Inch: Taiwan Production", 
           role: "Sound Designer", 
           client: "Studio M", 
-          img: "/images/Hedwig And the Angry Inch.png", 
+          img: "/images/Hedwig_And_the_Angry_Inch.png", 
           link: "https://www.facebook.com/studiomtw/"
         },
 
