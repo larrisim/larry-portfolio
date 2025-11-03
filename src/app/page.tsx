@@ -1,103 +1,110 @@
-import Image from "next/image";
+import Hero from '../../components/Hero'
+import Footer from '../../components/Footer'
+// import VideoGallery from '../../components/VideoGallery'
+import React from "react";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <Hero />
+      
+<main
+  style={{
+    display: "flex",
+    flexDirection: "row", // side by side
+    alignItems: "flex-start",
+    justifyContent: "space-between",
+    width: "100%",
+    gap: "60px", // space between columns
+    padding: "40px",
+    boxSizing: "border-box",
+  }}
+>
+  {/* Left: Description */}
+  <div style={{ flex: 1 }}>
+    <p>
+      <strong>Larry Chang</strong> is a <strong>composer and audio designer</strong> based in{" "}
+      <strong>New York City</strong>, specializing in <strong>immersive audio for interactive media, VR, and theater</strong>.
+      With over a decade of experience, Larry has dedicated his career to creating audio experiences that{" "}
+      <strong>engage audiences in innovative and emotionally compelling ways</strong>.
+    </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <p>
+      His latest work, <strong><em>Midnight's Dream</em></strong>, a revolutionary immersive theater experience produced by{" "}
+      <strong>Denver Immersive Repertory Theater (D.I.R.T.)</strong>, showcases his vision as both composer and audio designer.
+      The production combines spatial audio, live performance, and interactive soundscapes to transport audiences into a fully
+      realized, dreamlike world, highlighting Larry’s ability to <strong>merge technology and artistry</strong> to shape unforgettable experiences.
+    </p>
+
+    <p>
+      Larry’s expertise spans interactive VR narratives, film, and large-scale exhibitions. Notably, he contributed to the acclaimed
+      VR narrative <strong><em>The Price of Freedom</em></strong>, featured at the <strong>Sundance and Cinequest Film Festivals</strong>,
+      and the global exhibition <strong><em>Beyond Van Gogh</em></strong>, which has sold over 7 million tickets and generated $210 million
+      in revenue across 60+ markets. His work has earned nominations for the <strong>Golden Horse Awards</strong> and recognition from the{" "}
+      <strong>Vision Summit</strong> and <strong>International Serious Play Awards</strong>.
+    </p>
+
+    <p>
+      Committed to pushing the boundaries of sound in immersive media, Larry also shares his knowledge as a{" "}
+      <strong>visiting lecturer at Carnegie Mellon University</strong> and speaker at industry events such as{" "}
+      <strong>GameSound Con</strong> and <strong>AWE</strong>. His work continues to explore how{" "}
+      <strong>creative audio design can transform storytelling, environment, and audience experience</strong> across mediums.
+    </p>
+  </div>
+
+  {/* Right: Music Player */}
+  <div
+    style={{
+      flex: "0 0 50%", // fixed width column
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      textAlign: "center",
+    }}
+  >
+    <iframe
+      width="100%"
+      height="600"
+      scrolling="no"
+      frameBorder="no"
+      allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2100481043%3Fsecret_token%3Ds-FxwFQMBrgZk&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+    ></iframe>
+
+    <div
+      style={{
+        fontSize: "10px",
+        color: "#cccccc",
+        marginTop: "8px",
+        fontFamily:
+          "Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif",
+      }}
+    >
+      <a
+        href="https://soundcloud.com/larry-chang-177742238"
+        title="Larry Chang"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: "#cccccc", textDecoration: "none" }}
+      >
+        Larry Chang
+      </a>{" "}
+      ·{" "}
+      <a
+        href="https://soundcloud.com/larry-chang-177742238/sets/my-work"
+        title="My Work"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: "#cccccc", textDecoration: "none" }}
+      >
+        All rights reserved
+      </a>
     </div>
-  );
+  </div>
+</main>
+
+      
+      <Footer />
+    </>
+  )
 }
