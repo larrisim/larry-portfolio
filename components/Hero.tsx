@@ -4,16 +4,8 @@ export default function Hero() {
   return (
     <section className="w-full flex flex-col items-center text-center">
       {/* Responsive full-width container with intrinsic height */}
-
-      <div style={{ width: '100%', height: '400px', position: 'relative' }}>
-      <img
-          src="/images/profile.png"
-          alt="Larry Chang"
-          style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }}
-        />
-      </div>
-
-      {/* <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
+      
+      <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
         {/* <Image
           src="/images/profile.png"
           alt="Larry Chang"
@@ -22,7 +14,7 @@ export default function Hero() {
           priority
         /> */}
 
-       {/*  <img
+        <img
           src="/images/profile.png"
           alt="Larry Chang"
           style={{
@@ -33,7 +25,7 @@ export default function Hero() {
           display: "block"
           }}
 />
-      </div>*/}
+      </div>
       <br></br><br></br><br></br><br></br>
 
 
