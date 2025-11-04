@@ -1,9 +1,34 @@
 import "../../styles/globals.css";
 import Header from "../../components/Header";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Larry Chang | Composer | Audio Designer",
-  description: "Creative Audio Director & Developer",
+  description: "Larry Chang — Award-nominated composer & immersive audio designer crafting soundscapes for film, VR, and interactive experiences worldwide.",
+  openGraph: {
+    title: "Larry Chang | Composer | Audio Designer",
+    description: "Larry Chang — Award-nominated composer & immersive audio designer crafting soundscapes for film, VR, and interactive experiences worldwide.",
+    url: "https://www.larry-chang.com/",
+    siteName: "Larry Chang",
+    images: [
+      {
+        url: "/images/profile.png", // Place your preview image here
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Larry Chang | Composer | Audio Designer",
+    description: "Larry Chang — Award-nominated composer & immersive audio designer crafting soundscapes for film, VR, and interactive experiences worldwide.",
+    images: ["/images/preview.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -11,10 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="bg-[#fafafa] text-[#222] min-h-screen font-sans">
         <Header />
-        {/* Remove max-width limit to allow the grid to expand */}
-        <main className="w-full px-6 mt-16 mx-auto">
-          {children}
-        </main>
+        <main className="w-full px-6 mt-16 mx-auto">{children}</main>
       </body>
     </html>
   );
