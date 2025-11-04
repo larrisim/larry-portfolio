@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Larry Chang | Composer | Audio Designer",
     description: "Larry Chang — Award-nominated composer & immersive audio designer crafting soundscapes for film, VR, and interactive experiences worldwide.",
-    url: "https://www.larry-chang.com/",
+    url: "https://larry-portfolio-orcin.vercel.app",
     siteName: "Larry Chang",
     images: [
       {
