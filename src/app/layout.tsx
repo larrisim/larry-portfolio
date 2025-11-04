@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://larry-portfolio-orcin.vercel.app"), // Required for resolving social preview images
+  metadataBase: new URL("https://larry-portfolio-orcin.vercel.app"), // Base URL for resolving relative URLs
   title: "Larry Chang | Composer | Audio Designer",
   description:
     "Larry Chang — Award-nominated composer & immersive audio designer crafting soundscapes for film, VR, and interactive experiences worldwide.",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "Larry Chang Portfolio",
     images: [
       {
-        url: "/images/preview.png", // Place your social preview image in public/images/
+        url: "https://larry-portfolio-orcin.vercel.app/images/preview.png", // Use absolute URL
         width: 1200,
         height: 630,
       },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Larry Chang | Composer | Audio Designer",
     description:
       "Larry Chang — Award-nominated composer & immersive audio designer crafting soundscapes for film, VR, and interactive experiences worldwide.",
-    images: ["/images/preview.png"],
+    images: ["https://larry-portfolio-orcin.vercel.app/images/preview.png"], // Absolute URL required
   },
   icons: {
     icon: "/favicon.ico",
