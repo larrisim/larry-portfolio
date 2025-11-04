@@ -43,7 +43,7 @@ export default function WorksPage() {
           title: "Journey Through the Camps", 
           role: "Composer & Sound Designer", 
           client: "Orta Interactive", 
-          img: "/images/Journey_through_the_camps.png", 
+          img: "/images/Journey-through-the-camps.png", 
           link: "https://www.ortainteractive.com/work/journeywithhowardchandler-798y5" 
         },
 
@@ -90,7 +90,7 @@ export default function WorksPage() {
           title: "Tiny Pixel Knight", 
           role: "Composer & Sound Designer",
           client: "Loongcheer Game",
-          img: "/images/TPN.png",
+          img: "/images/tpn.png",
           link: "https://www.loongcheer.com/games/TinyPixelKnight"
         },
 
@@ -120,7 +120,7 @@ export default function WorksPage() {
         { title: "In the Forest", 
           role: "Composer", 
           client: "Larrisim Studio", 
-          img: "/images/INF square.png", 
+          img: "/images/inf.png", 
           link: "https://www.imdb.com/title/tt18350280/" 
         },
       ],
