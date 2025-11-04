@@ -90,7 +90,7 @@ export default function WorksPage() {
           title: "Tiny Pixel Knight", 
           role: "Composer & Sound Designer",
           client: "Loongcheer Game",
-          img: "/images/tpn.png",
+          img: "/images/TPN.png",
           link: "https://www.loongcheer.com/games/TinyPixelKnight"
         },
 

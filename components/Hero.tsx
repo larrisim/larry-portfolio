@@ -1,20 +1,20 @@
 "use client";
-//import Image from "next/image";
+import Image from "next/image";
 export default function Hero() {
   return (
     <section className="w-full flex flex-col items-center text-center">
       {/* Responsive full-width container with intrinsic height */}
       
       <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
-        {/* <Image
+         <Image
           src="/images/profile.png"
           alt="Larry Chang"
           fill
           style={{ objectFit: "contain", objectPosition: "center" }}
-          priority
-        /> */}
+          priority 
+        /> 
 
-        <img
+        {/* <img
           src="/images/profile.png"
           alt="Larry Chang"
           style={{
@@ -24,7 +24,7 @@ export default function Hero() {
           objectPosition: "center",
           display: "block"
           }}
-/>
+          /> */}
       </div>
       <br></br><br></br><br></br><br></br>
 
