@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Larry Chang | Composer | Audio Designer",
     description: "Larry Chang — Award-nominated composer & immersive audio designer crafting soundscapes for film, VR, and interactive experiences worldwide.",
-    images: ["/images/preview.png"],
+    images: ["/images/profile.png"],
   },
   icons: {
     icon: "/favicon.ico",
