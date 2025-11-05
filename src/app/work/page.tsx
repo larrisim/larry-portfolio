@@ -138,7 +138,7 @@ export default function WorksPage() {
         },
 
         { 
-          title: "Hedwig And the Angry Inch: Taiwan Production", 
+          title: "Hedwig and the Angry Inch: Taiwan Production", 
           role: "Sound Designer", 
           client: "Studio M", 
           img: "/images/Hedwig_And_the_Angry_Inch.png", 
