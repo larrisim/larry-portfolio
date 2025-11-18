@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     images: ["https://larry-portfolio-orcin.vercel.app/images/preview.png"], // Absolute URL required
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favorite.png",
     apple: "/apple-touch-icon.png",
   },
 };
