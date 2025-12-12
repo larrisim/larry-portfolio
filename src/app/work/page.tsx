@@ -28,7 +28,7 @@ export default function WorksPage() {
           role: "Audio Director, Composer & Sound Designer", 
           client: "Denvor Immersive Repetory Theater", 
           img: "/images/DIRT.png", 
-          link: "https://denverimmersive.com/" 
+          link: "https://www.denverimmersive.com/midnightsdream/" 
         },
 
         { 
