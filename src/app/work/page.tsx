@@ -130,6 +130,14 @@ export default function WorksPage() {
       items: [
 
         { 
+          title: "Late Blooming", 
+          role: "Composer & Sound Designer", 
+          client: "Voyage Theater Company", 
+          img: "/images/Late_Blooming.jpg", 
+          link: "https://www.broadwayworld.com/off-off-broadway/article/Photos-LATE-BLOOMING-World-Premiere-Opens-at-The-Wild-Project-as-Part-of-Fresh-Fruit-Festival-20260429"
+        },
+
+        { 
           title: "A Few Deep Breaths", 
           role: "Composer & Sound Designer", 
           client: "La MaMa Experimental Theatre Club", 
