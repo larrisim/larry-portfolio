@@ -117,6 +117,14 @@ export default function WorksPage() {
           link: "https://www.imdb.com/title/tt4412082/" 
         },
 
+        { 
+          title: "Jump Ashin!", 
+          role: "Composer", 
+          client: "One Attitude Film", 
+          img: "/images/A-shin.jpg", 
+          link: "https://www.imdb.com/title/tt2011076" 
+        },
+
         { title: "In the Forest", 
           role: "Composer", 
           client: "Larrisim Studio", 
