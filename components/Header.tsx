@@ -12,6 +12,7 @@ export default function Header() {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Work", href: "/work" },
+    { name: "Sample", href:"https://larrisim.wixsite.com/index/sound-design-new"},
     { name: "Contact", href: "/contact" },
   ];
 
