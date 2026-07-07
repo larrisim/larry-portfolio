@@ -29,36 +29,67 @@ export default function Header() {
       }}
     >
       {/* LEFT — Menu */}
-      <nav style={{ display: "flex", gap: "20px", zIndex: 2 }}>
-        {navItems.map((item) => (
-          <Link
-            key={item.name}
-            href={item.href}
-            style={{
-              position: "relative",
-              textDecoration: "none",
-              textTransform: "uppercase",
-              fontSize: "0.9rem",
-              fontWeight: pathname === item.href ? 600 : 400,
-              color: pathname === item.href ? "#000" : "#555",
-            }}
-          >
-            {item.name}
-            <span
-              style={{
-                position: "absolute",
-                bottom: "-4px",
-                left: 0,
-                height: "2px",
-                width: "0%",
-                backgroundColor: "#000",
-                transition: "width 0.3s ease",
-              }}
-              className="underline"
-            />
-          </Link>
-        ))}
-      </nav>
+<nav style={{ display: "flex", gap: "20px", zIndex: 2 }}>
+  {navItems.map((item) =>
+    item.external ? (
+      <a
+        key={item.name}
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          position: "relative",
+          textDecoration: "none",
+          textTransform: "uppercase",
+          fontSize: "0.9rem",
+          fontWeight: pathname === item.href ? 600 : 400,
+          color: pathname === item.href ? "#000" : "#555",
+        }}
+      >
+        {item.name}
+        <span
+          style={{
+            position: "absolute",
+            bottom: "-4px",
+            left: 0,
+            height: "2px",
+            width: "0%",
+            backgroundColor: "#000",
+            transition: "width 0.3s ease",
+          }}
+          className="underline"
+        />
+      </a>
+    ) : (
+      <Link
+        key={item.name}
+        href={item.href}
+        style={{
+          position: "relative",
+          textDecoration: "none",
+          textTransform: "uppercase",
+          fontSize: "0.9rem",
+          fontWeight: pathname === item.href ? 600 : 400,
+          color: pathname === item.href ? "#000" : "#555",
+        }}
+      >
+        {item.name}
+        <span
+          style={{
+            position: "absolute",
+            bottom: "-4px",
+            left: 0,
+            height: "2px",
+            width: "0%",
+            backgroundColor: "#000",
+            transition: "width 0.3s ease",
+          }}
+          className="underline"
+        />
+      </Link>
+    )
+  )}
+</nav>
 
       {/* CENTER — Logo */}
       <div
