@@ -179,7 +179,7 @@ export default function WorksPage() {
           role: "Composer", 
           client: "Larrisim Studio", 
           img: "/images/LOAVsquare.png", 
-          link: "https://soundcloud.com/larrisimchang/sets/legends-of-altair-and-vega-demo?si=af186755343c4fcba506ab46eaf1c522&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" 
+          link: "https://open.spotify.com/album/33eagGRXjM9LjucQ7toxsV?si=aIeEXUDVSu2C1EcriFh7Sw" 
         },
       ],
     },
