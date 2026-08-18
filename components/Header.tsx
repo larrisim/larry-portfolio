@@ -9,10 +9,16 @@ import { FaBluesky } from "react-icons/fa6";
 export default function Header() {
   const pathname = usePathname();
 
-  const navItems = [
+  type NavItem = {
+    name: string;
+    href: string;
+    external?: boolean;
+  };
+
+  const navItems: NavItem[] = [
     { name: "Home", href: "/" },
     { name: "Work", href: "/work" },
-    //{ name: "Sample", href: "https://larrisim.wixsite.com/index", external: true },
+    // { name: "Sample", href: "https://larrisim.wixsite.com/index", external: true },
     { name: "Contact", href: "/contact" },
   ];
 
