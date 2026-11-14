@@ -1,185 +1,170 @@
+
 "use client";
 
 import Image from "next/image";
-import Footer from '../../../components/Footer'
+import Footer from '../../../components/Footer';
 
 export default function WorksPage() {
   const works = [
     {
       section: "Immersive Experiences",
       items: [
-        { 
-          title: "Beyond Van Gogh: A Life in Letters VR", 
-          role: "Composer & Sound Designer", 
+        {
+          title: "Beyond Van Gogh: A Life in Letters VR",
+          role: "Composer & Sound Designer",
           client: "Bouvlard Arts",
           img: "/images/beyond-vangogh.jpg",
           link: "https://beyondvangogh.com/"
         },
-
-        { title: "The Mirage: A 29Rooms Experience", 
-          role: "Sound Designer & Composer", 
-          client: "Refinery29", 
-          img: "/images/29rooms.png", 
-          link: "https://www.refinery29.com/en-us/29rooms" 
+        {
+          title: "The Mirage: A 29Rooms Experience",
+          role: "Sound Designer & Composer",
+          client: "Refinery29",
+          img: "/images/29rooms.png",
+          link: "https://www.refinery29.com/en-us/29rooms"
         },
-
-        { 
-          title: "Midnight's Dream", 
-          role: "Audio Director, Composer & Sound Designer", 
-          client: "Denvor Immersive Repetory Theater", 
-          img: "/images/DIRT.png", 
-          link: "https://www.denverimmersive.com/midnightsdream/" 
+        {
+          title: "Midnight's Dream",
+          role: "Audio Director, Composer & Sound Designer",
+          client: "Denvor Immersive Repetory Theater",
+          img: "/images/DIRT.png",
+          link: "https://www.denverimmersive.com/midnightsdream/"
         },
-
-        { 
-          title: "The Price of Freedom", 
+        {
+          title: "The Price of Freedom",
           role: "Audio Director, Composer & Sound Designer",
           client: "Countruct Studio",
           img: "/images/pof.png",
           link: "https://store.steampowered.com/app/561080/The_Price_of_Freedom/"
         },
-
-        { 
-          title: "Journey Through the Camps", 
-          role: "Composer & Sound Designer", 
-          client: "Orta Interactive", 
-          img: "/images/Journey-through-the-camps.png", 
-          link: "https://www.ortainteractive.com/work/journeywithhowardchandler-798y5" 
+        {
+          title: "Journey Through the Camps",
+          role: "Composer & Sound Designer",
+          client: "Orta Interactive",
+          img: "/images/Journey-through-the-camps.png",
+          link: "https://www.ortainteractive.com/work/journeywithhowardchandler-798y5"
         },
-
-        { 
-          title: "Home A Drone", 
+        {
+          title: "Home A Drone",
           role: "Audio Director, Composer & Sound Designer",
           client: "Countruct Studio",
           img: "/images/home_a_drone.png",
           link: "https://store.steampowered.com/app/1065770/Home_A_Drone/"
         },
-
-          { 
-          title: "Sweet Sorrow", 
+        {
+          title: "Sweet Sorrow",
           role: "Audio Director, Composer & Sound Designer",
           client: "Orta Interactive",
           img: "/images/Sweet-Sorrow-Poster.png",
           link: "https://www.ortainteractive.com/work/shakespeare-vr"
         },
-
       ],
     },
 
-     {
+    {
       section: "Video Games & Interactive Experiences",
       items: [
-
-        { 
-          title: "Dragonspire", 
+        {
+          title: "Dragonspire",
           role: "Audio Director & Sound Designer",
           client: "Lionheart Games, Starmi",
           img: "/images/Dragonspire.jpg",
           link: "https://store.steampowered.com/app/2160380/Dragonspire/"
         },
-
-          { 
-          title: "Little Pizzeria", 
+        {
+          title: "Little Pizzeria",
           role: "Audio Director, Composer & Sound Designer",
           client: "Orta Interactive",
           img: "/images/little-pizzeria.png",
           link: "https://www.ortainteractive.com/work/little-pizzeria"
         },
-
-        { 
-          title: "Tiny Pixel Knight", 
+        {
+          title: "Tiny Pixel Knight",
           role: "Composer & Sound Designer",
           client: "Loongcheer Game",
           img: "/images/TPN.png",
           link: "https://www.loongcheer.com/games/TinyPixelKnight"
         },
-
       ],
     },
-    
+
     {
       section: "Film / Documentary / Commercials",
       items: [
-
-        { 
-          title: "Zone Pro Site: The Moveable Feast", 
-          role: "Composer", 
-          client: "Ocean Deep Films", 
-          img: "/images/ZoneProSite.jpg", 
-          link: "https://www.imdb.com/title/tt3166476/" 
+        {
+          title: "Zone Pro Site: The Moveable Feast",
+          role: "Composer",
+          client: "Ocean Deep Films",
+          img: "/images/ZoneProSite.jpg",
+          link: "https://www.imdb.com/title/tt3166476/"
         },
-
-         { 
-          title: "My Geeky Nerdy Buddies", 
-          role: "Composer", 
-          client: "Bona Film Group", 
-          img: "/images/nerd2.jpg", 
-          link: "https://www.imdb.com/title/tt4412082/" 
+        {
+          title: "My Geeky Nerdy Buddies",
+          role: "Composer",
+          client: "Bona Film Group",
+          img: "/images/nerd2.jpg",
+          link: "https://www.imdb.com/title/tt4412082/"
         },
-
-        { 
-          title: "Jump Ashin!", 
-          role: "Composer", 
-          client: "One Attitude Film", 
-          img: "/images/A-shin.jpg", 
-          link: "https://www.imdb.com/title/tt2011076" 
+        {
+          title: "Jump Ashin!",
+          role: "Composer",
+          client: "One Attitude Film",
+          img: "/images/A-shin.jpg",
+          link: "https://www.imdb.com/title/tt2011076"
         },
-
-        { title: "In the Forest", 
-          role: "Composer", 
-          client: "Larrisim Studio", 
-          img: "/images/inf.png", 
-          link: "https://www.imdb.com/title/tt18350280/" 
+        {
+          title: "In the Forest",
+          role: "Composer",
+          client: "Larrisim Studio",
+          img: "/images/inf.png",
+          link: "https://www.imdb.com/title/tt18350280/"
         },
       ],
     },
+
     {
       section: "Theatre Productions",
       items: [
-
-        { 
-          title: "Late Blooming", 
-          role: "Composer & Sound Designer", 
-          client: "Voyage Theater Company", 
-          img: "/images/Late_Blooming.jpg", 
+        {
+          title: "Late Blooming",
+          role: "Composer & Sound Designer",
+          client: "Voyage Theater Company",
+          img: "/images/Late_Blooming.jpg",
           link: "https://www.broadwayworld.com/off-off-broadway/article/Photos-LATE-BLOOMING-World-Premiere-Opens-at-The-Wild-Project-as-Part-of-Fresh-Fruit-Festival-20260429"
         },
-
-        { 
-          title: "A Few Deep Breaths", 
-          role: "Composer & Sound Designer", 
-          client: "La MaMa Experimental Theatre Club", 
-          img: "/images/AFDB22.png", 
+        {
+          title: "A Few Deep Breaths",
+          role: "Composer & Sound Designer",
+          client: "La MaMa Experimental Theatre Club",
+          img: "/images/AFDB22.png",
           link: "https://seasons.lamama.org/shows/a-few-deep-breaths-2022"
         },
-
-        { 
-          title: "Hedwig and the Angry Inch: Taiwan Production", 
-          role: "Sound Designer", 
-          client: "Studio M", 
-          img: "/images/Hedwig_And_the_Angry_Inch.png", 
+        {
+          title: "Hedwig and the Angry Inch: Taiwan Production",
+          role: "Sound Designer",
+          client: "Studio M",
+          img: "/images/Hedwig_And_the_Angry_Inch.png",
           link: "https://www.facebook.com/studiomtw/"
         },
-
-        { 
-          title: "Show On", 
-          role: "Composer & Sound Designer", 
-          client: "Shakespeare's Wild Sisters Group", 
-          img: "/images/showOn.jpg", 
+        {
+          title: "Show On",
+          role: "Composer & Sound Designer",
+          client: "Shakespeare's Wild Sisters Group",
+          img: "/images/showOn.jpg",
           link: "https://showon-app.blogspot.com/"
         },
-
       ],
     },
+
     {
       section: "Concept Albums",
       items: [
-        { 
-          title: "Legends of Altair and Vega", 
-          role: "Composer", 
-          client: "Larrisim Studio", 
-          img: "/images/LOAVsquare.png", 
-          link: "https://open.spotify.com/album/33eagGRXjM9LjucQ7toxsV?si=aIeEXUDVSu2C1EcriFh7Sw" 
+        {
+          title: "Legends of Altair and Vega",
+          role: "Composer",
+          client: "Larrisim Studio",
+          img: "/images/LOAVsquare.png",
+          link: "https://open.spotify.com/album/33eagGRXjM9LjucQ7toxsV?si=aIeEXUDVSu2C1EcriFh7Sw"
         },
       ],
     },
@@ -187,12 +172,34 @@ export default function WorksPage() {
 
   return (
     <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "40px 20px", color: "#000" }}>
-      <h1 style={{ textAlign: "left", fontSize: "2.5rem", marginBottom: "40px" }}>Work</h1>
+      <h1 style={{ textAlign: "left", fontSize: "2.5rem", marginBottom: "40px" }}>
+        Work
+      </h1>
 
       {works.map((section) => (
         <div key={section.section} style={{ marginBottom: "60px" }}>
           <h2 style={{ fontSize: "1.5rem", marginBottom: "20px", borderBottom: "1px solid #555", paddingBottom: "8px" }}>
             {section.section}
+
+            {section.section === "Immersive Experiences" && (
+              <p style={{
+                fontSize: "0.95rem",
+                fontWeight: "normal",
+                marginTop: "8px",
+                marginBottom: "0",
+                borderBottom: "none"
+              }}>
+                Explore these immersive experiences in{" "}
+                <a
+                  href="https://explore.arrival.space/space/78251062"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "inherit", textDecoration: "underline" }}
+                >
+                  Arrival.Space
+                </a>.
+              </p>
+            )}
           </h2>
 
           <div style={{
@@ -239,7 +246,9 @@ export default function WorksPage() {
 
                 {/* Text Info */}
                 <div style={{ padding: "12px" }}>
-                  <div style={{ fontWeight: "bold", marginBottom: "5px" }}>{item.title}</div>
+                  <div style={{ fontWeight: "bold", marginBottom: "5px" }}>
+                    {item.title}
+                  </div>
                   <div>{item.role}</div>
                   <div>Client: {item.client}</div>
                 </div>
@@ -262,8 +271,8 @@ export default function WorksPage() {
           }
         }
       `}</style>
+
       <Footer />
     </div>
-
   );
 }
