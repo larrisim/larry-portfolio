@@ -10,6 +10,13 @@ export default function WorksPage() {
       section: "Immersive Experiences",
       items: [
         {
+          title: "Ink & Paint",
+          role: "Composer & Sound Designer",
+          client: "Ink & Paint LLC.",
+          img: "/images/I&P.png",
+          link: "https://www.inkandpaint.live/"
+        },
+        {
           title: "Beyond Van Gogh: A Life in Letters VR",
           role: "Composer & Sound Designer",
           client: "Bouvlard Arts",
