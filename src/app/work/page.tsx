@@ -185,11 +185,12 @@ export default function WorksPage() {
               <p style={{
                 fontSize: "0.95rem",
                 fontWeight: "normal",
+                fontStyle: "italic",
                 marginTop: "8px",
                 marginBottom: "0",
                 borderBottom: "none"
               }}>
-                Explore these immersive experiences in{" "}
+                (Explore these immersive experiences in{" "}
                 <a
                   href="https://explore.arrival.space/space/78251062"
                   target="_blank"
@@ -197,7 +198,7 @@ export default function WorksPage() {
                   style={{ color: "inherit", textDecoration: "underline" }}
                 >
                   Arrival.Space
-                </a>.
+                </a>.)
               </p>
             )}
           </h2>
