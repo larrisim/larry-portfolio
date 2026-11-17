@@ -10,6 +10,7 @@ export default function Hero() {
           src="/images/profile.png"
           alt="Larry Chang"
           fill
+          sizes="100vw"
           style={{ objectFit: "contain", objectPosition: "center" }}
           priority 
         /> 
@@ -26,7 +27,7 @@ export default function Hero() {
           }}
           /> */}
       </div>
-      <br></br><br></br><br></br><br></br>
+      <div aria-hidden="true" className="h-10 sm:h-16" />
 
 
     </section>

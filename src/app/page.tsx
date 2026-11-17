@@ -8,20 +8,9 @@ export default function Home() {
     <>
       <Hero />
       
-<main
-  style={{
-    display: "flex",
-    flexDirection: "row", // side by side
-    alignItems: "flex-start",
-    justifyContent: "space-between",
-    width: "100%",
-    gap: "60px", // space between columns
-    padding: "40px",
-    boxSizing: "border-box",
-  }}
->
+<div className="flex w-full flex-col items-start justify-between gap-8 px-2 py-6 sm:px-4 lg:flex-row lg:gap-[60px] lg:p-10">
   {/* Left: Description */}
-  <div style={{ flex: 1 }}>
+  <div className="min-w-0 flex-1">
     <p>
       <strong>Larry Chang</strong> is a <strong>composer and audio designer</strong> based in{" "}
       <strong>New York City</strong>, specializing in <strong>immersive audio for interactive media, VR, and theater</strong>.
@@ -53,18 +42,10 @@ export default function Home() {
   </div>
 
   {/* Right: Music Player */}
-  <div
-    style={{
-      flex: "0 0 50%", // fixed width column
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      textAlign: "center",
-    }}
-  >
+  <div className="flex w-full flex-col items-center text-center lg:w-1/2 lg:flex-none">
     <iframe
-      width="100%"
-      height="600"
+      title="Larry Chang music playlist on SoundCloud"
+      className="h-[450px] w-full sm:h-[500px] lg:h-[600px]"
       scrolling="no"
       frameBorder="no"
       allow="autoplay"
@@ -101,7 +82,7 @@ export default function Home() {
       </a>
     </div>
   </div>
-</main>
+</div>
 
       
       <Footer />

@@ -4,8 +4,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="centerone">
-      <br></br> <br></br> <br></br> <br></br> 
+    <footer className="centerone mt-10 py-8">
       <p>
         &copy; {currentYear} Larry Chang. All rights reserved.
       </p>

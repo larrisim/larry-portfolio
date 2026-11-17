@@ -26,7 +26,7 @@ export default function MusicPage() {
   return (
     <section className="py-20 px-6 max-w-5xl mx-auto text-center">
       <h2 className="text-3xl font-semibold mb-6">Music</h2>
-      <p className="text-gray-300 mb-8">
+      <p className="text-gray-600 mb-8">
         Original compositions blending traditional influences with modern soundscapes.
       </p>
 
@@ -51,8 +51,8 @@ export default function MusicPage() {
               onClick={() => handlePlay(track.src)}
               className={`cursor-pointer py-2 transition-colors ${
                 currentTrack === track.src
-                  ? "text-white font-semibold"
-                  : "text-gray-400 hover:text-white"
+                  ? "text-black font-semibold"
+                  : "text-gray-500 hover:text-black"
               }`}
             >
               ▶ {track.title}

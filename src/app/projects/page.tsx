@@ -36,10 +36,10 @@ export default function WorksPage() {
     {
       section: "Theatre Productions",
       items: [
-        { title: "Miidnight's Dream (2025)", role: "Composer, Arranger, Orchestrator, Sound Designer, Mixing Engineer" },
+        { title: "Midnight's Dream (2025)", role: "Composer, Arranger, Orchestrator, Sound Designer, Mixing Engineer" },
         { title: "A Few Deep Breaths (2022)", role: "Composer, Arranger, Orchestrator, Sound Designer, Mixing Engineer" },
         { title: "Go Go Adventure to the Ocean (2014)", role: "Composer, Arranger, Orchestrator, Mixing Engineer" },
-        { title: "The Comedy of Hiers (2014)", role: "Composer, Arranger, Orchestrator, Mixing Engineer" },
+        { title: "A Comedy of Heirs (2014)", role: "Composer, Arranger, Orchestrator, Mixing Engineer" },
       ],
     },
     {
@@ -54,7 +54,7 @@ export default function WorksPage() {
 
   return (
     <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "40px 20px", color: "black"}}>
-      <h1 style={{ textAlign: "left", fontSize: "2.5rem", marginBottom: "40px" }}>Project</h1>
+      <h1 className="mb-10 text-left text-3xl sm:text-[2.5rem]">Project</h1>
 
       {works.map((section) => (
         <div key={section.section}>
@@ -62,11 +62,7 @@ export default function WorksPage() {
             {section.section}
           </h2>
 
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "20px"
-          }}>
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {section.items.map((item) => (
               <div key={item.title} style={{
                 padding: "15px",
