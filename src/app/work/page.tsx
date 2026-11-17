@@ -33,14 +33,14 @@ export default function WorksPage() {
         {
           title: "Midnight's Dream",
           role: "Audio Director, Composer & Sound Designer",
-          client: "Denvor Immersive Repetory Theater",
+          client: "Denver Immersive Repertory Theater",
           img: "/images/DIRT.png",
           link: "https://www.denverimmersive.com/midnightsdream/"
         },
         {
           title: "The Price of Freedom",
           role: "Audio Director, Composer & Sound Designer",
-          client: "Countruct Studio",
+          client: "Construct Studio",
           img: "/images/pof.png",
           link: "https://store.steampowered.com/app/561080/The_Price_of_Freedom/"
         },
@@ -54,7 +54,7 @@ export default function WorksPage() {
         {
           title: "Home A Drone",
           role: "Audio Director, Composer & Sound Designer",
-          client: "Countruct Studio",
+          client: "Construct Studio",
           img: "/images/home_a_drone.png",
           link: "https://store.steampowered.com/app/1065770/Home_A_Drone/"
         },
@@ -179,7 +179,7 @@ export default function WorksPage() {
 
   return (
     <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "40px 20px", color: "#000" }}>
-      <h1 style={{ textAlign: "left", fontSize: "2.5rem", marginBottom: "40px" }}>
+      <h1 className="mb-10 text-left text-3xl sm:text-[2.5rem]">
         Work
       </h1>
 
@@ -210,11 +210,7 @@ export default function WorksPage() {
             )}
           </h2>
 
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "20px",
-          }}>
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {section.items.map((item) => (
               <a
                 key={item.title}
@@ -265,20 +261,6 @@ export default function WorksPage() {
           </div>
         </div>
       ))}
-
-      <style jsx>{`
-        @media (max-width: 1024px) {
-          div[style*='grid-template-columns'] {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
-
-        @media (max-width: 768px) {
-          div[style*='grid-template-columns'] {
-            grid-template-columns: 1fr;
-          }
-        }
-      `}</style>
 
       <Footer />
     </div>

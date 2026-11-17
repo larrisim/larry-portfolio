@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  viewport: "width=device-width, initial-scale=1",
   metadataBase: new URL("https://larry-portfolio-orcin.vercel.app"), // Base URL for resolving relative URLs
   title: "Larry Chang | Composer | Audio Designer",
   description:
@@ -40,7 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="bg-[#fafafa] text-[#222] min-h-screen font-sans">
         <Header />
-        <main className="w-full px-6 mt-16 mx-auto">{children}</main>
+        <main className="w-full px-4 sm:px-6 mt-16 mx-auto">{children}</main>
       </body>
     </html>
   );
