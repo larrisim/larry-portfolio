@@ -3,13 +3,6 @@
 import { useState } from "react";
 import { Turnstile } from "@marsidev/react-turnstile";
 
-const TOPICS = [
-  "Collaboration",
-  "Commission",
-  "Press / Speaking",
-  "Just saying hi",
-] as const;
-
 type Status = "idle" | "sending" | "success" | "error";
 
 const inputClass =
@@ -23,7 +16,7 @@ export default function ContactForm() {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [topic, setTopic] = useState<(typeof TOPICS)[number]>("Collaboration");
+  const [topic, setTopic] = useState("");
   const [message, setMessage] = useState("");
   const [company, setCompany] = useState("");
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
@@ -63,7 +56,7 @@ export default function ContactForm() {
       setStatus("success");
       setName("");
       setEmail("");
-      setTopic("Collaboration");
+      setTopic("");
       setMessage("");
       setCompany("");
       setTurnstileToken(null);
@@ -152,23 +145,20 @@ export default function ContactForm() {
           htmlFor="contact-topic"
           className="mb-2 block text-base font-medium text-black"
         >
-          What&rsquo;s this about?
+          Topic{" "}
+          <span className="font-normal text-gray-500">(optional)</span>
         </label>
-        <select
+        <input
           id="contact-topic"
           name="topic"
+          type="text"
+          autoComplete="off"
+          maxLength={100}
           value={topic}
-          onChange={(e) =>
-            setTopic(e.target.value as (typeof TOPICS)[number])
-          }
+          onChange={(e) => setTopic(e.target.value)}
+          placeholder="What is this about?"
           className={inputClass}
-        >
-          {TOPICS.map((t) => (
-            <option key={t} value={t}>
-              {t}
-            </option>
-          ))}
-        </select>
+        />
       </div>
 
       <div className="mb-6">
