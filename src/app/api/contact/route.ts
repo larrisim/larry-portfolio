@@ -3,13 +3,6 @@ import { Resend } from "resend";
 
 export const dynamic = "force-dynamic";
 
-const TOPICS = [
-  "Collaboration",
-  "Commission",
-  "Press / Speaking",
-  "Just saying hi",
-] as const;
-
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // In-memory rate limiting: max 5 submissions per IP per 10 minutes.
@@ -94,11 +87,12 @@ export async function POST(request: Request) {
   if (typeof email !== "string" || !EMAIL_RE.test(email.trim())) {
     return error("Please enter a valid email address.", 400);
   }
+  // Topic is optional free text (max 100 characters).
   if (
-    typeof topic !== "string" ||
-    !(TOPICS as readonly string[]).includes(topic)
+    topic !== undefined &&
+    (typeof topic !== "string" || topic.trim().length > 100)
   ) {
-    return error("Please choose a valid topic.", 400);
+    return error("Please keep the topic under 100 characters.", 400);
   }
   if (
     typeof message !== "string" ||
@@ -113,6 +107,10 @@ export async function POST(request: Request) {
 
   const cleanName = name.trim();
   const cleanEmail = email.trim();
+  const cleanTopic =
+    typeof topic === "string" && topic.trim() !== ""
+      ? topic.trim()
+      : "(not given)";
   const cleanMessage = message.trim();
 
   // --- Rate limiting ---
@@ -155,7 +153,7 @@ export async function POST(request: Request) {
   const textBody = [
     `Name: ${cleanName}`,
     `Email: ${cleanEmail}`,
-    `Topic: ${topic}`,
+    `Topic: ${cleanTopic}`,
     "",
     cleanMessage,
   ].join("\n");
@@ -163,7 +161,7 @@ export async function POST(request: Request) {
   const htmlBody = `
     <p><strong>Name:</strong> ${escapeHtml(cleanName)}</p>
     <p><strong>Email:</strong> ${escapeHtml(cleanEmail)}</p>
-    <p><strong>Topic:</strong> ${escapeHtml(topic)}</p>
+    <p><strong>Topic:</strong> ${escapeHtml(cleanTopic)}</p>
     <hr />
     <p>${escapeHtml(cleanMessage).replace(/\n/g, "<br />")}</p>
   `;
@@ -173,7 +171,10 @@ export async function POST(request: Request) {
     const { error: sendError } = await resend.emails.send({
       from,
       to,
-      subject: `Portfolio contact: ${topic} — ${cleanName}`,
+      subject:
+        cleanTopic === "(not given)"
+          ? `Portfolio contact — ${cleanName}`
+          : `Portfolio contact: ${cleanTopic} — ${cleanName}`,
       replyTo: cleanEmail,
       text: textBody,
       html: htmlBody,

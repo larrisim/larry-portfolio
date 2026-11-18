@@ -179,7 +179,7 @@ export default function WorksPage() {
 
   return (
     <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "40px 20px", color: "#000" }}>
-      <h1 className="mb-10 text-left text-3xl sm:text-[2.5rem]">
+      <h1 className="text-4xl font-bold mb-6">
         Work
       </h1>
 
