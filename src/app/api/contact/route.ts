@@ -70,13 +70,13 @@ export async function POST(request: Request) {
     return error("Invalid request body.", 400);
   }
 
-  const { name, email, topic, message, company, turnstileToken } =
+  const { name, email, topic, message, extra, turnstileToken } =
     body as Record<string, unknown>;
 
-  // Honeypot: the "company" field is hidden from real visitors. If it is
+  // Honeypot: the "extra" field is hidden from real visitors. If it is
   // filled in, this is almost certainly a bot — pretend it worked so the
   // bot cannot tell it was caught, and send nothing.
-  if (typeof company === "string" && company.trim() !== "") {
+  if (typeof extra === "string" && extra.trim() !== "") {
     return NextResponse.json({ ok: true });
   }
 

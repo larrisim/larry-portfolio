@@ -18,7 +18,7 @@ export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [topic, setTopic] = useState("");
   const [message, setMessage] = useState("");
-  const [company, setCompany] = useState("");
+  const [extra, setExtra] = useState("");
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -43,7 +43,7 @@ export default function ContactForm() {
           email,
           topic,
           message,
-          company,
+          extra,
           turnstileToken,
         }),
       });
@@ -58,7 +58,7 @@ export default function ContactForm() {
       setEmail("");
       setTopic("");
       setMessage("");
-      setCompany("");
+      setExtra("");
       setTurnstileToken(null);
       setTurnstileKey((k) => k + 1);
     } catch (err) {
@@ -183,7 +183,11 @@ export default function ContactForm() {
       </div>
 
       {/* Honeypot: hidden from real visitors (off-screen, not display:none,
-          so bots still see and fill it). Leave this field empty. */}
+          so bots still see and fill it). Leave this field empty.
+          Deliberately named "extra", not "company": browsers autofill a
+          field called "company" from saved profile data, which made the
+          server mistake real visitors for bots and silently drop their
+          messages while showing a fake success. */}
       <div
         aria-hidden="true"
         style={{
@@ -195,15 +199,15 @@ export default function ContactForm() {
           overflow: "hidden",
         }}
       >
-        <label htmlFor="contact-company">Company</label>
+        <label htmlFor="contact-extra">Leave this field empty</label>
         <input
-          id="contact-company"
-          name="company"
+          id="contact-extra"
+          name="extra"
           type="text"
           autoComplete="off"
           tabIndex={-1}
-          value={company}
-          onChange={(e) => setCompany(e.target.value)}
+          value={extra}
+          onChange={(e) => setExtra(e.target.value)}
         />
       </div>
 
