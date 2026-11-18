@@ -29,6 +29,27 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Contact form
+
+The Contact page has a form that sends email via [Resend](https://resend.com)
+and is protected by [Cloudflare Turnstile](https://www.cloudflare.com/products/turnstile/)
+plus a honeypot field and basic rate limiting. It needs environment variables
+to work — copy `.env.example` to `.env.local` for local development, and add
+the same variables in Vercel (Project Settings → Environment Variables,
+Production):
+
+1. **Resend** — create an API key at resend.com/api-keys and verify your
+   sending domain (for testing, Resend's onboarding sender works but only
+   delivers to the account owner's email). Set `RESEND_API_KEY`,
+   `CONTACT_TO` (where submissions go) and `CONTACT_FROM`.
+2. **Turnstile** — create a site in the Cloudflare dashboard
+   (Turnstile → Add site) and copy the site key and secret key into
+   `NEXT_PUBLIC_TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY`.
+
+Until those are set, the form shows a note that spam protection isn't
+configured and submissions fail gracefully — the email link on the page still
+works. See `.env.example` for details.
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
