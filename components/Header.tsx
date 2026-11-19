@@ -24,7 +24,7 @@ export default function Header() {
 
   const socials = [
     { name: "Instagram", href: "https://www.instagram.com/larrisim/", Icon: FaInstagram },
-    { name: "LinkedIn", href: "https://www.linkedin.com/in/larry-yucheng-chang-36442180/", Icon: FaLinkedin },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/larrisim/", Icon: FaLinkedin },
     { name: "Bluesky", href: "https://bsky.app/profile/larrisim.bsky.social", Icon: FaBluesky },
     { name: "YouTube", href: "https://www.youtube.com/@larrisim", Icon: FaYoutube },
   ];
