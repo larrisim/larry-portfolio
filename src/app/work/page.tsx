@@ -12,7 +12,7 @@ export default function WorksPage() {
         {
           title: "Ink & Paint",
           role: "Composer & Sound Designer",
-          client: "Ink & Paint LLC.",
+          client: "Hunters Point",
           img: "/images/I&P.png",
           link: "https://www.inkandpaint.live/"
         },
